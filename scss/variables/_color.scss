@@ -1,0 +1,51 @@
+$l12: 100%;
+$l11: 91.66666667%;
+$l10: 83.33333333%;
+$l9: 75%;
+$l8: 66.66666667%;
+$l7: 58.33333333%;
+$l6: 50%;
+$l5: 41.66666667%;
+$l4: 33.33333333%;
+$l3: 25%;
+$l2: 16.66666667%;
+$l1: 8.33333333%;
+
+// color
+$dark1: hsl(240, $l1, $l1);
+$dark2: hsl(240, $l1, $l2);
+$dark3: hsl(240, $l1, $l4);
+$dark4: hsl(240, $l1, $l5);
+$gray: hsl(240, $l1, $l6);
+$light4: hsl(240, $l1, $l7);
+$light3: hsl(240, $l1, $l8);
+$light2: hsl(240, $l1, $l9);
+$light1: hsl(240, $l1, $l11);
+$white: hsl(240, $l1, $l12);
+
+$green: hsl(150, $l7, $l5);
+$blue: hsl(225, $l7, $l6);
+
+$primary: hsl(90, $l8, $l6);
+$secondary: complement($primary);
+
+// background
+$bg1: $white;
+$bg2: $light1;
+
+// border
+$bd: $light2;
+
+// foreground
+$fg1: $dark1;
+$fg2: $bg1;
+
+// link
+$ln: $blue;
+$ln-hover: lighten($ln, $l1);
+
+// button
+$btn1: $dark2;
+$btn1-hover: lighten($btn1, $l1);
+$btn2: $gray;
+$btn2-hover: lighten($btn2, $l1);

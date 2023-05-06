@@ -1,0 +1,82 @@
+@use "variables/color";
+@use "variables/sizing" as size;
+
+h1,
+.h1 {
+    font-size: size.$h1;
+    font-weight: 700;
+    line-height: size.$short;
+}
+
+h2,
+.h2 {
+    font-size: size.$h2;
+    font-weight: 500;
+    line-height: size.$short;
+}
+
+h3,
+.h3 {
+    font-size: size.$body;
+    font-weight: 500;
+}
+
+.font-small {
+    font-size: size.$small;
+    font-weight: 400;
+    line-height: size.$short;
+}
+
+.font-smaller {
+    font-size: size.$smaller;
+    font-weight: 400;
+    line-height: size.$short;
+}
+
+a {
+    color: color.$ln;
+    font-weight: 500;
+    text-decoration: underline;
+    transition-duration: 200ms;
+    transition-property: color;
+    transition-timing-function: linear;
+
+    &:hover {
+        color: color.$ln-hover;
+    }
+}
+
+.font-sans {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+@mixin tablet {}
+
+@mixin desktop {
+    h2,
+    .h2 {
+        font-size: size.$h1;
+    }
+
+    h3,
+    .h3 {
+        font-size: size.$h2;
+    }
+}

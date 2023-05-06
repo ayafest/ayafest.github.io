@@ -1,0 +1,39 @@
+@use "../variables/sizing" as size;
+
+@keyframes background-fade {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.0625);
+    }
+
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+.background-fade {
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+
+    .background-fade__image {
+        background: url(../images/bg1.jpg) no-repeat center / cover;
+        min-height: 61.8033988749895vh;
+    }
+}
+
+@mixin tablet {}
+
+@mixin desktop {
+    .background-fade {
+        .background-fade__image {
+            animation: 20s linear infinite background-fade;
+        }
+    }
+}

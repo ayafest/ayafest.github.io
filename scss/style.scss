@@ -1,0 +1,34 @@
+@use "reset";
+@use "body";
+@use "typography";
+@use "grid";
+@use "hero";
+@use "about-place" as chapada;
+@use "components/background-fade" as background;
+@use "components/button";
+@use "components/floating" as float;
+@use "components/social";
+
+@media screen and (min-width: 48rem) {
+    @include body.tablet;
+    @include typography.tablet;
+    @include grid.tablet;
+    @include hero.tablet;
+    @include chapada.tablet;
+    @include background.tablet;
+    @include button.tablet;
+    @include float.tablet;
+    @include social.tablet;
+}
+
+@media screen and (min-width: 64rem) {
+    @include body.desktop;
+    @include typography.desktop;
+    @include grid.desktop;
+    @include hero.desktop;
+    @include chapada.desktop;
+    @include background.desktop;
+    @include button.desktop;
+    @include float.desktop;
+    @include social.desktop;
+}

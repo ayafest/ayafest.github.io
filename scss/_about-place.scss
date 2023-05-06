@@ -1,0 +1,12 @@
+#about-place {
+}
+
+@mixin tablet {}
+
+@mixin desktop {
+    #about-place {
+        .grid__item {
+            grid-column: 2/4;
+        }
+    }
+}

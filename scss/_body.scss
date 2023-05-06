@@ -1,0 +1,85 @@
+@use "variables/color";
+@use "variables/sizing" as size;
+
+@font-face {
+    font-display: swap;
+    font-family: Literata;
+    font-style: normal;
+    font-weight: 200 900;
+    src: local("Literata"), url(../fonts/Literata-VariableFont_opsz,wght.ttf) format("truetype-variations");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Literata;
+    font-style: italic;
+    font-weight: 200 900;
+    src: local("Literata"), url(../fonts/Literata-Italic-VariableFont_opsz,wght.ttf) format("truetype-variations");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 100 900;
+    src: local("Montserrat"), url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype-variations");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 100 900;
+    src: local("Montserrat"), url(../fonts/Montserrat-Italic-VariableFont_wght.ttf) format("truetype-variations");
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-color: color.$bg1;
+    color: color.$fg1;
+    font-family: Literata, "Times New Roman", Times, serif;
+    font-size: size.$body;
+    font-weight: 400;
+    line-height: size.$tall;
+    min-height: 100%;
+    position: relative;
+}
+
+section {
+    .grid {
+        padding: size.$l7 size.$gap;
+    }
+
+    .section__title {
+        margin-bottom: size.$gap;
+    }
+
+    p {
+        margin-bottom: size.$gap;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+#footer {
+    background-color: color.$dark1;
+    color: color.$white;
+    text-align: center;
+}
+
+@mixin tablet {}
+
+@mixin desktop {
+    #footer {
+        .grid__item {
+            grid-column: 1/4;
+        }
+    }
+}

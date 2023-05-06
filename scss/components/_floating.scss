@@ -1,0 +1,60 @@
+@use "../variables/color";
+@use "../variables/sizing" as size;
+
+@keyframes floating-grow {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.272019649514069);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(0.7861513777574233);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.floating {
+    animation: 3s linear 2 floating-grow;
+    line-height: 1;
+    position: fixed;
+    right: size.$l2;
+    bottom: size.$l3;
+
+    .button {
+        background-color: color.$secondary;
+        border-color: color.$light1;
+        border-radius: 50%;
+        color: color.$light1;
+    }
+
+    &__image {
+        width: size.$l2;
+        height: size.$l2;
+    }
+
+    .button:hover {
+        background-color: lighten(color.$secondary, color.$l1);
+        color: color.$light1;
+    }
+}
+
+@mixin tablet {}
+
+@mixin desktop {
+    .floating {
+        &__image {
+            width: size.$l3;
+            height: size.$l3;
+        }
+    }
+}
