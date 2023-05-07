@@ -72,12 +72,15 @@ main {
             }
         }
 
-        ul {
-            list-style: inside;
+        ul li::before {
+            content: "✹ ";
         }
     }
 }
 
+#eixo-3 ul {
+    margin-bottom: size.$gap;
+}
 
 #footer {
     background-color: color.$dark1;
