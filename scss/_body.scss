@@ -76,6 +76,22 @@ main {
             content: "✹ ";
         }
     }
+    
+    #main__cta {
+        background: linear-gradient(150deg, color.$white, color.$primary);
+        color: color.$fg1;
+        text-align: center;
+
+        .grid {
+            padding: size.$l7 size.$gap;
+        }
+
+        a {
+            margin-top: size.$gap;
+        }
+    }
+
+
 }
 
 #eixo-3 ul {
@@ -118,7 +134,8 @@ main {
 @mixin tablet {}
 
 @mixin desktop {
-    #footer {
+    #footer,
+    #main__cta {
         .grid__item {
             grid-column: 1/4;
         }
