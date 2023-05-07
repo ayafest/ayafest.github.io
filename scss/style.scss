@@ -3,7 +3,6 @@
 @use "typography";
 @use "grid";
 @use "hero";
-@use "about-place" as chapada;
 @use "components/background-fade" as background;
 @use "components/button";
 @use "components/floating" as float;
@@ -14,7 +13,6 @@
     @include typography.tablet;
     @include grid.tablet;
     @include hero.tablet;
-    @include chapada.tablet;
     @include background.tablet;
     @include button.tablet;
     @include float.tablet;
@@ -26,7 +24,6 @@
     @include typography.desktop;
     @include grid.desktop;
     @include hero.desktop;
-    @include chapada.desktop;
     @include background.desktop;
     @include button.desktop;
     @include float.desktop;

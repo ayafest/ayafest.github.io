@@ -23,9 +23,16 @@
     position: relative;
 
     .background-fade__image {
-        background: url(../images/bg1.jpg) no-repeat center / cover;
         min-height: 61.8033988749895vh;
     }
+}
+
+#promo-1 {
+    background: url(../images/bg1.jpg) no-repeat center / cover;
+}
+
+#promo-2 {
+    background: url(../images/bg2.jpg) no-repeat center / cover;
 }
 
 @mixin tablet {}

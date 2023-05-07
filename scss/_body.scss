@@ -50,28 +50,55 @@ body {
     position: relative;
 }
 
-section {
-    .grid {
-        padding: size.$l7 size.$gap;
-    }
+main {
+    section {
+        &:nth-child(odd) {
+            background-color: color.$light1;
+        }
 
-    .section__title {
-        margin-bottom: size.$gap;
-    }
+        .grid {
+            padding: size.$l7 size.$gap;
+        }
 
-    p {
-        margin-bottom: size.$gap;
-    }
+        .section__title {
+            margin-bottom: size.$gap;
+        }
 
-    p:last-of-type {
-        margin-bottom: 0;
+        p {
+            margin-bottom: size.$gap;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            list-style: inside;
+        }
     }
 }
+
 
 #footer {
     background-color: color.$dark1;
     color: color.$white;
     text-align: center;
+
+    &__cta {
+        background: linear-gradient(150deg, color.$white, color.$primary);
+
+        .grid {
+            padding: size.$l7 size.$gap;
+        }
+
+        .cta__title {
+            color: color.$fg1;
+        }
+
+        a {
+            margin-top: size.$gap;
+        }
+    }
 }
 
 @mixin tablet {}
@@ -80,6 +107,22 @@ section {
     #footer {
         .grid__item {
             grid-column: 1/4;
+        }
+    }
+
+    main {
+        section {
+            &:nth-child(even) {
+                .grid__item {
+                    grid-column: 2/4;
+                }
+            }
+
+            &:nth-child(odd) {
+                .grid__item {
+                    grid-column: 1/3;
+                }
+            }
         }
     }
 }

@@ -32,9 +32,9 @@
 
     .button {
         background-color: color.$secondary;
-        border-color: color.$light1;
+        border-color: color.$white;
         border-radius: 50%;
-        color: color.$light1;
+        color: color.$white;
     }
 
     &__image {
@@ -44,7 +44,7 @@
 
     .button:hover {
         background-color: lighten(color.$secondary, color.$l1);
-        color: color.$light1;
+        color: color.$white;
     }
 }
 
