@@ -5,6 +5,7 @@
 @use "hero";
 @use "components/background-fade" as background;
 @use "components/button";
+@use "components/countdown";
 @use "components/floating" as float;
 @use "components/social";
 
@@ -15,6 +16,7 @@
     @include hero.tablet;
     @include background.tablet;
     @include button.tablet;
+    @include countdown.tablet;
     @include float.tablet;
     @include social.tablet;
 }
@@ -26,6 +28,7 @@
     @include hero.desktop;
     @include background.desktop;
     @include button.desktop;
+    @include countdown.tablet;
     @include float.desktop;
     @include social.desktop;
 }

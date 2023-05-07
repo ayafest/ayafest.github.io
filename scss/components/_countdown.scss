@@ -1,0 +1,19 @@
+@use "../variables/color";
+@use "../variables/sizing" as size;
+
+#countdown {
+    color: color.$dark3;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: size.$l4;
+    font-weight: 300;
+    letter-spacing: size.$s12;
+    line-height: size.$short;
+}
+
+@mixin tablet {}
+
+@mixin desktop {
+    #countdown {
+        font-size: size.$l6;
+    }
+}

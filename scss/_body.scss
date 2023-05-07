@@ -89,17 +89,28 @@ main {
 
     &__cta {
         background: linear-gradient(150deg, color.$white, color.$primary);
+        color: color.$fg1;
 
         .grid {
             padding: size.$l7 size.$gap;
         }
 
-        .cta__title {
-            color: color.$fg1;
+        a {
+            margin-top: size.$gap;
+        }
+    }
+
+    .footer__credits {
+        p {
+            margin-bottom: size.$s1;
         }
 
         a {
-            margin-top: size.$gap;
+            color: color.$primary;
+
+            &:hover {
+                color: lighten(color.$primary, color.$l1);
+            }
         }
     }
 }

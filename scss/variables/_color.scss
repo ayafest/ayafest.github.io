@@ -23,8 +23,9 @@ $light2: hsl(240, $l1, $l9);
 $light1: hsl(240, $l1, $l11);
 $white: hsl(240, $l1, $l12);
 
-$green: hsl(150, $l7, $l5);
-$blue: hsl(225, $l7, $l6);
+$red: hsl(0, $l8, $l6);
+$green: hsl(150, $l8, $l5);
+$blue: hsl(225, $l8, $l6);
 
 $primary: hsl(90, $l8, $l6);
 $secondary: complement($primary);
