@@ -122,15 +122,15 @@ a {
         font-size: fonts.$colossal;
     }
 
-    .h1 {
+    h1, .h1 {
         font-size: fonts.$huge;
     }
 
-    .h2 {
+    h2, .h2 {
         font-size: fonts.$h1;
     }
 
-    .h3 {
+    h3, .h3 {
         font-size: fonts.$h2;
     }
 }
