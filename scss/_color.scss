@@ -1,0 +1,38 @@
+@use "abstracts/colors";
+
+body {
+    background-color: colors.$background-lighter;
+    color: colors.$text-darker;
+}
+
+.bg-gradient {
+    background: colors.$gradient;
+}
+
+.bg-light {
+    background-color: colors.$background-light;
+}
+
+.bg-darker {
+    background-color: colors.$background-darker;
+}
+
+.color-dark {
+    color: colors.$text-dark;
+}
+
+.color-lighter {
+    color: colors.$text-lighter;
+}
+
+.color-red {
+    color: colors.$red;
+}
+
+.color-primary {
+    color: colors.$primary;
+}
+
+a.color-primary:hover {
+    color: colors.$primary-lighter;
+}

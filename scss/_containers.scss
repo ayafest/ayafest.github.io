@@ -1,20 +1,16 @@
-@use "variables/sizing" as size;
-
-.container {}
+@use "abstracts/sizes";
 
 .grid {
     display: grid;
-    gap: size.$gap;
+    gap: sizes.$grid-gap;
     grid-template-columns: 1fr;
-    padding: size.$l1;
+    padding: sizes.$grid-gap;
 }
-
-@mixin tablet {}
 
 @mixin desktop {
     .container {
         margin: 0 auto;
-        width: calc(60% - size.$l1 * 2);
+        width: calc(60% - sizes.$large-1 * 2);
     }
 
     .grid {

@@ -1,0 +1,87 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/sizes";
+
+@keyframes floating-button {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.272019649514069);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(0.7861513777574233);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+%button {
+    align-items: center;
+    border-style: solid;
+    border-width: .125rem;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: fonts.$secondary;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: .0625rem;
+    line-height: fonts.$short;
+    padding: sizes.$medium;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 200ms;
+    transition-property: background-color, border-color, color;
+    transition-timing-function: linear;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: sizes.$grid-gap;
+}
+
+.button {
+    @extend %button;
+    background-color: colors.$dark;
+    border-color: colors.$dark;
+    border-radius: sizes.$large-3;
+    color: colors.$text-lighter;
+
+    &:hover {
+        background-color: colors.$dark-lighter;
+        border-color: colors.$dark-lighter;
+        color: colors.$text-lighter;
+    }
+}
+
+.button--floating {
+    @extend %button;
+    animation: 3s linear 2 floating-button;
+    background-color: colors.$secondary;
+    border-color: colors.$text-lighter;
+    border-radius: 50%;
+    color: colors.$text-lighter;
+    position: fixed;
+    right: sizes.$large-2;
+    bottom: sizes.$large-4;
+
+    &:hover {
+        background-color: colors.$secondary;
+        color: colors.$text-lighter;
+    }
+
+    svg {
+        width: sizes.$large-1;
+        height: sizes.$large-1;
+    }
+}

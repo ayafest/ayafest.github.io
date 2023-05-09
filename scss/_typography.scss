@@ -1,53 +1,94 @@
-@use "variables/color";
-@use "variables/sizing" as size;
+@use "abstracts/colors";
+@use "abstracts/fonts";
 
-h1,
-.h1 {
-    font-size: size.$h1;
+@font-face {
+    font-display: swap;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 200 900;
+    src: local("Open Sans"), url(../fonts/OpenSans-VariableFont_wdth,wght.ttf) format("truetype-variations");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: 200 900;
+    src: local("Open Sans"), url(../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format("truetype-variations");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 100 900;
+    src: local("Montserrat"), url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype-variations");
+}
+
+%default {
+    font-family: colors.$primary;
+    font-weight: 400;
+    line-height: fonts.$tall;
+}
+
+%display {
+    font-family: fonts.$secondary;
+    font-weight: 500;
+    letter-spacing: fonts.$wide;
+    line-height: fonts.$short;
+}
+
+html {
+    font-size: 18px;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    @extend %default;
+    font-size: fonts.$body;
+}
+
+.colossal {
+    @extend %display;
+    font-size: fonts.$colossal;
+}
+
+.huge {
+    @extend %display;
+    font-size: fonts.$huge;
+}
+
+h1, .h1 {
+    font-size: fonts.$h1;
     font-weight: 700;
-    line-height: size.$short;
+    line-height: fonts.$short;
 }
 
-h2,
-.h2 {
-    font-size: size.$h2;
+h2, .h2 {
+    font-size: fonts.$h2;
     font-weight: 500;
-    line-height: size.$short;
+    line-height: fonts.$short;
 }
 
-h3,
-.h3 {
-    font-size: size.$body;
-    font-weight: 500;
+h3, .h3 {
+    font-size: fonts.$h3;
+    font-weight: 300;
+    line-height: fonts.$tall;
 }
 
-.font-small {
-    font-size: size.$small;
-    font-weight: 400;
-    line-height: size.$short;
-}
-
-.font-smaller {
-    font-size: size.$smaller;
-    font-weight: 400;
-    line-height: size.$short;
+.small {
+    @extend %default;
+    font-size: fonts.$small;
 }
 
 a {
-    color: color.$ln;
-    font-weight: 500;
-    transition-duration: 200ms;
-    transition-property: color;
-    transition-timing-function: linear;
+    @extend %default;
+    color: colors.$blue;
+    transition: color 200ms linear;
 
     &:hover {
-        color: color.$ln-hover;
+        color: colors.$blue-lighter;
     }
-}
-
-.font-sans {
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-
 }
 
 .font-bold {
@@ -66,16 +107,28 @@ a {
     font-weight: 300;
 }
 
-@mixin tablet {}
+.text-center {
+    text-align: center;
+}
 
 @mixin desktop {
-    h2,
-    .h2 {
-        font-size: size.$h1;
+    html {
+        font-size: 20px;
     }
 
-    h3,
+    .huge {
+        font-size: fonts.$colossal;
+    }
+
+    .h1 {
+        font-size: fonts.$huge;
+    }
+
+    .h2 {
+        font-size: fonts.$h1;
+    }
+
     .h3 {
-        font-size: size.$h2;
+        font-size: fonts.$h2;
     }
 }

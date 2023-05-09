@@ -1,34 +1,20 @@
 @use "reset";
 @use "body";
+@use "color";
 @use "typography";
-@use "grid";
+@use "containers";
 @use "hero";
+@use "components/buttons";
 @use "components/background-fade" as background;
-@use "components/button";
-@use "components/countdown";
-@use "components/floating" as float;
-@use "components/social";
 
 @media screen and (min-width: 48rem) {
-    @include body.tablet;
-    @include typography.tablet;
-    @include grid.tablet;
-    @include hero.tablet;
-    @include background.tablet;
-    @include button.tablet;
-    @include countdown.tablet;
-    @include float.tablet;
-    @include social.tablet;
 }
 
 @media screen and (min-width: 64rem) {
-    @include body.desktop;
     @include typography.desktop;
-    @include grid.desktop;
+    @include containers.desktop;
+    @include body.desktop;
     @include hero.desktop;
     @include background.desktop;
-    @include button.desktop;
-    @include countdown.tablet;
-    @include float.desktop;
-    @include social.desktop;
+    @include background.desktop;
 }

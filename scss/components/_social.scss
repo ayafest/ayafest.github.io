@@ -1,19 +1,6 @@
 @use "../variables/color";
 @use "../variables/sizing" as size;
 
-.social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &__link {
-        color: color.$primary;
-
-        &:hover {
-            color: lighten(color.$primary, color.$l1);
-        }
-    }
-}
 
 @mixin tablet {}
 
