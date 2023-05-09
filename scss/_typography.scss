@@ -1,5 +1,6 @@
 @use "abstracts/colors";
 @use "abstracts/fonts";
+@use "abstracts/sizes";
 
 @font-face {
     font-display: swap;
@@ -90,6 +91,11 @@ a {
 
     &:hover {
         color: colors.$blue-lighter;
+    }
+
+    svg {
+        width: sizes.$large-1;
+        height: sizes.$large-1;
     }
 }
 

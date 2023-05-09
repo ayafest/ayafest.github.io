@@ -26,8 +26,6 @@
 
 %button {
     align-items: center;
-    border-style: solid;
-    border-width: .125rem;
     cursor: pointer;
     display: inline-flex;
     font-family: fonts.$secondary;
@@ -66,22 +64,17 @@
 
 .button--floating {
     @extend %button;
-    animation: 3s linear 2 floating-button;
+    animation: 4s linear 2 floating-button;
     background-color: colors.$secondary;
-    border-color: colors.$text-lighter;
+    border: colors.$text-lighter solid sizes.$border;
     border-radius: 50%;
     color: colors.$text-lighter;
     position: fixed;
-    right: sizes.$large-2;
-    bottom: sizes.$large-4;
+    right: sizes.$medium;
+    bottom: sizes.$medium;
 
     &:hover {
         background-color: colors.$secondary;
         color: colors.$text-lighter;
-    }
-
-    svg {
-        width: sizes.$large-1;
-        height: sizes.$large-1;
     }
 }
