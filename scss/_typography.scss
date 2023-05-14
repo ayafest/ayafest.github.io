@@ -20,12 +20,20 @@
     src: local("Open Sans"), url(../fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format("truetype-variations");
 }
 
-@font-face {
+/*@font-face {
     font-display: swap;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 100 900;
     src: local("Montserrat"), url(../fonts/Montserrat-VariableFont_wght.ttf) format("truetype-variations");
+}*/
+
+@font-face {
+    font-display: swap;
+    font-family: "Gloria Hallelujah";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Gloria Hallelujah"), url(../fonts/GloriaHallelujah-Regular.ttf) format("truetype");
 }
 
 %default {
@@ -62,12 +70,14 @@ body {
 }
 
 h1, .h1 {
+    font-family: fonts.$secondary;
     font-size: fonts.$h1;
     font-weight: 700;
     line-height: fonts.$short;
 }
 
 h2, .h2 {
+    font-family: fonts.$secondary;
     font-size: fonts.$h2;
     font-weight: 500;
     line-height: fonts.$short;
@@ -97,6 +107,14 @@ a {
         width: sizes.$large-1;
         height: sizes.$large-1;
     }
+}
+
+.font-primary {
+    font-family: fonts.$primary;
+}
+
+.font-secondary {
+    font-family: fonts.$secondary;
 }
 
 .font-bold {

@@ -26,15 +26,15 @@
 }
 
 #promo-1 {
-    background: url(../images/bg1.webp) no-repeat center / cover;
+    background: url(../images/bg1.webp) no-repeat center 0 / cover;
 }
 
 #promo-2 {
-    background: url(../images/bg2.webp) no-repeat center / cover;
+    background: url(../images/bg3.webp) no-repeat center / cover;
 }
 
 #promo-3 {
-    background: url(../images/bg3.webp) no-repeat center / cover;
+    background: url(../images/bg2.webp) no-repeat 0 0 / cover;
 }
 
 @mixin desktop {
@@ -45,14 +45,14 @@
     }
 
     #promo-1 {
-        background: url(../images/bg1l.webp) no-repeat center / cover;
+        background: url(../images/bg1l.webp) no-repeat 50% 0 / cover;
     }
 
     #promo-2 {
-        background: url(../images/bg2l.webp) no-repeat center / cover;
+        background: url(../images/bg3l.webp) no-repeat center / cover;
     }
 
     #promo-3 {
-        background: url(../images/bg3l.webp) no-repeat center / cover;
+        background: url(../images/bg2l.webp) no-repeat 0 0 / cover;
     }
 }
