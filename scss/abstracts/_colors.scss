@@ -25,6 +25,7 @@ $light: hsl(240, $l1, $l11);
 $light-darker: hsl(240, $l1, $l10);
 $light-lighter: hsl(240, $l1, $l12);
 $primary: hsl(90, $l8, $l6);
+$primary-darker: darken($primary, $l1);
 $primary-lighter: lighten($primary, $l1);
 $red: hsl(0, $l9, $l6);
 $red-lighter: lighten($red, $l1);
